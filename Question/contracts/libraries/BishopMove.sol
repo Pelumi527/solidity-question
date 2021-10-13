@@ -1,25 +1,27 @@
-//SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 import {SystemTypes} from "./SystemTypes.sol";
-//import {SafeMath} from "@openzeppelin/contracts/utils/math/SafeMath.sol";
+contract BishopMove{
 
-
-contract KnightMove {
-    
-    //using SafeMath for uint8;
- 
     SystemTypes.Diff[] private Moves;
 
-    constructor(){ 
-       Moves.push(SystemTypes.Diff(1,2));
-       Moves.push(SystemTypes.Diff(1, -2));
-       Moves.push(SystemTypes.Diff(-1, 2));
-       Moves.push(SystemTypes.Diff(-1, -2));
-       Moves.push(SystemTypes.Diff(2, 1));
-       Moves.push(SystemTypes.Diff(-2, 1));
-       Moves.push(SystemTypes.Diff(2, -1));
-       Moves.push(SystemTypes.Diff(-2, -1)); 
+    constructor(){
+        Moves.push(SystemTypes.Diff(1,1));
+        Moves.push(SystemTypes.Diff(2,2));
+        Moves.push(SystemTypes.Diff(3,3));
+        Moves.push(SystemTypes.Diff(4,4));
+        Moves.push(SystemTypes.Diff(5,5));
+        Moves.push(SystemTypes.Diff(6,6));
+        Moves.push(SystemTypes.Diff(7,7));
+        Moves.push(SystemTypes.Diff(-1,-1));
+        Moves.push(SystemTypes.Diff(-2,-2));
+        Moves.push(SystemTypes.Diff(-3,-3));
+        Moves.push(SystemTypes.Diff(-4,-4));
+        Moves.push(SystemTypes.Diff(-5,-5));
+        Moves.push(SystemTypes.Diff(-6,-6));
+        Moves.push(SystemTypes.Diff(-7,-7));
     }
+
+
 
     function validMovesFor(SystemTypes.Position memory _position) public view returns (SystemTypes.Position[] memory) {
         
@@ -45,6 +47,6 @@ contract KnightMove {
         }
         return results;
     }
- 
-} 
- 
+}
+
+

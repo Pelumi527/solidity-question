@@ -12,8 +12,7 @@ describe("KnightMove", function () {
   });
 
   describe("MoveFromInsideBoard", () => {
-    it("Move from the insider of board should work", async function () {
-      
+    it("Move from the inside of board should work", async function () {
       var pos =  { X:3, Y:3};
       var moves = await knightMove.validMovesFor(pos);
       assert.equal(moves.length, 8);

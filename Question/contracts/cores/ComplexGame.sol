@@ -4,6 +4,8 @@ import "../interfaces/IGame.sol";
 import "../libraries/KnightMove.sol";
 import "../libraries/SystemTypes.sol";
 import "../libraries/Randomizer.sol"; 
+import "../libraries/BishopMove.sol";
+import "../libraries/QueenMove.sol";
 import "hardhat/console.sol";
 contract ComplexGame is IGame {
 
